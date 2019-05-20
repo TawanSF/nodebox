@@ -8,7 +8,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const conn = require('./config/database.json');
+const conn = require('../config.json');
 
 const app = express();
 
