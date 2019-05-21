@@ -1,3 +1,10 @@
+'use strict';
+
+/**
+ * Created by Tawan Silva on 20/05/19
+ * tawan.sf.99@gmail.com
+ */
+
 const multer = require('multer');
 const path = require('path');
 const cry = require('crypto')
