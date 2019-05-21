@@ -10,18 +10,18 @@ const Box = require('../models/Box');
 
 class FileController {
     async store (req, res) {
-        const box = Box.findById(req.params.id);
+        const box = await Box.findById(req.params.id);
 
         const file = await File.create({
             title: req.file.originalname,
             path: req.file.key
-        })
+        });
 
         box.files.push(file);
 
         await box.save();
 
-        return res.json(file)
+        return res.json(file);
     }
 }
 
