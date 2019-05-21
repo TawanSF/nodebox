@@ -61,4 +61,5 @@ typings/
 .next
 
 config.json
-tmp/
+tmp/*
+!tmp/.gitkeep
