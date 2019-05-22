@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "f2431775-15a7-4989-81b3-3183be503338",
+		"name": "Box",
+		"description": "Aplicação real-time em node com socket.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Files",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "Envie a foto aqui",
+							"type": "file",
+							"src": "/C:/Users/tawan/OneDrive/Área de Trabalho/Tawan/26677426.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{web}}/boxes/5ce48e446a0c8a0021123b93/files",
+					"host": [
+						"{{web}}"
+					],
+					"path": [
+						"boxes",
+						"5ce48e446a0c8a0021123b93",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Boxes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{web}}/boxes/5ce48e446a0c8a0021123b93",
+					"host": [
+						"{{web}}"
+					],
+					"path": [
+						"boxes",
+						"5ce48e446a0c8a0021123b93"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Boxes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Tawan Box\"\n}"
+				},
+				"url": {
+					"raw": "{{web}}/boxes",
+					"host": [
+						"{{web}}"
+					],
+					"path": [
+						"boxes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6df6667c-d4c3-4afe-9ced-24e9c0eb283a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1d72c993-745d-4ade-ba2c-8d3fc74edb1e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
